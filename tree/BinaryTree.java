@@ -76,6 +76,19 @@ class BinaryTree{
     }
   }
 
+  public boolean isBinarySearchTree(Node root, int min, int max){
+
+    if(root==null){
+      return(true);
+    }
+
+    if(root.data < min || root.data >max){
+      return(false);
+    }
+
+    return(isBinarySearchTree(root.left, min, root.data) && isBinarySearchTree(root.right, root.data, max));
+  }
+
 
   public static void main(String[] args) {
     BinaryTree binaryTree = new BinaryTree();
