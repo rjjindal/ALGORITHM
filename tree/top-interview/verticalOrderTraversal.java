@@ -25,8 +25,6 @@ class Main{
 
   void printVerticalOrder(BNode root){
 
-
-
     TreeMap<Integer, ArrayList<Integer>> m = new TreeMap<>();
     int hd=0;
     getVerticalOrder(root, hd, m);
@@ -50,6 +48,6 @@ class Main{
     root.right.right.right = new BNode(9);
 
     Main obj = new Main();
-    obj.printVerticalOrder(root); 
+    obj.printVerticalOrder(root);
   }
 }
